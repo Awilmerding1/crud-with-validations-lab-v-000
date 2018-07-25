@@ -2,12 +2,14 @@
 
 <% @songs.each do |song| %>
 	<div class="song">
-	 <span><h3><%= song.title %></h3></span>
-	 <span><p><%= song.released %></p></span>
-	 <span><p><%= song.release_year %></p></span>
-	 <span><p><%= song.artist_name %></p></span>
-	 <span><p><%= song.genre %></p></span>
+	  <tbody>
+	 <span><tr><%= song.title %></tr></span>
+	 <span><tr><%= song.released %></tr></span>
+	 <span><tr><%= song.release_year %></tr></span>
+	 <span><tr><%= song.artist_name %></tr></span>
+	 <span><tr><%= song.genre %></tr></span>
 	  <%= link_to "Delete", song, method: :delete, data: { confirm: "Really?" } %>
+	  </tbody>
 	</div>
 <% end %>
 
